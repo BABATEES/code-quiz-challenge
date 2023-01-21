@@ -12,6 +12,8 @@ var currentQuestionIndex = 0;
 
 var timer = 0
 
+startButton.addEventListener("click", showQuestions);
+
 //Created function to display the questions for answering
 function showQuestions() {
 
@@ -36,4 +38,21 @@ function getquestions() {
 
 
 }
+function handleclick(){
+  var choice = this.textContent;
+  var answer= questions[currentQuestionIndex].answer;
+  currentQuestionIndex ++;
+  if (choice ===answer){
+  return;
+  }
+  else{
+   timer=timer- 10;
+  }
 
+  if (currentQuestionIndex<(questions.length)){
+   getquestions();
+  }
+
+  else{ alert("game over")}
+
+}
