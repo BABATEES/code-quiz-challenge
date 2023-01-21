@@ -28,7 +28,9 @@ function getquestions() {
   var currentQuestion = questions[currentQuestionIndex];
   console.log(currentQuestion);
   questionstitle.textContent = currentQuestion.question;
+  removeAllChildNodes(choices);
   for (i = 0; i < currentQuestion.options.length; i++) {
+
     var choice = document.createElement("button");
     choice.textContent = currentQuestion.options[i];
     choice.onclick = handleclick;
@@ -38,21 +40,31 @@ function getquestions() {
 
 
 }
-function handleclick(){
+
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+
+
+function handleclick() {
   var choice = this.textContent;
-  var answer= questions[currentQuestionIndex].answer;
-  currentQuestionIndex ++;
-  if (choice ===answer){
-  return;
+  var answer = questions[currentQuestionIndex].answer;
+  currentQuestionIndex++;
+  if (choice === answer) {
+    return;
   }
-  else{
-   timer=timer- 10;
-  }
-
-  if (currentQuestionIndex<(questions.length)){
-   getquestions();
+  else {
+    timer = timer - 10;
   }
 
-  else{ alert("game over")}
+  if (currentQuestionIndex < (questions.length)) {
+    getquestions();
+  }
+
+  else { alert("game over") }
 
 }
