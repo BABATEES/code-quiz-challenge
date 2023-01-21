@@ -1,26 +1,26 @@
-var Quizquestions= [
+var questions= [
     {
-        Question: "What Does HTML Stand For?",
+        question: "What Does HTML Stand For?",
         options:[
         "Hypertext Markup Language",
         "Hypertext Markdown Language",
         "Hyperloop Machine Language",
         "Hypotext Markup language",
         ],
-        Answer: "A"
+        answer: "Hypertext Markup Language"
     },
-    {
-    Question: "What Does CSS Stand For?",
+   {
+    question: "What Does CSS Stand For?",
     options:[
     "Central Style Sheets",
     "Cascading Style Sheets",
     "Cascading Simple Sheets",
     "Cascading style sheet",
     ],
-    Answer: "B",
+    Answer: "Cascading Style Sheets",
     },
 
-    {Question: "Which Language Runs In A Web Browser?",
+    {question: "Which Language Runs In A Web Browser?",
     options:
     [
     "Java",
@@ -28,10 +28,10 @@ var Quizquestions= [
     "Python",
     "JavaScript",
     ],
-    Answer: "D",
+    answer: "JavaScript",
 },
     {
-    Question: "What Year Was JavaScript Launched?",
+    question: "What Year Was JavaScript Launched?",
     options:
     [
      "1996",
@@ -40,18 +40,18 @@ var Quizquestions= [
     "None Of The Above",
     ],
     
-    Answer: "B",
+    answer: "1995",
 
     },
     {
-        Question: "what is full meaning of DOM in Java?",
+        question: "what is full meaning of DOM in Java?",
        options: [
         "Document object Model",
         "Document object Modem",
         "Document object Modern",
         "None Of The Above",
     ],
-        Answer: "A",
+        answer: "Document object Model",
     
         },
     ];
