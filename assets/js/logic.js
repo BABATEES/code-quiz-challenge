@@ -30,7 +30,7 @@ function getquestions() {
   questionstitle.textContent = currentQuestion.question;
   removeAllChildNodes(choices);
   for (i = 0; i < currentQuestion.options.length; i++) {
-
+   
     var choice = document.createElement("button");
     choice.textContent = currentQuestion.options[i];
     choice.onclick = handleclick;
